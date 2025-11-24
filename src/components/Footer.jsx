@@ -15,8 +15,8 @@ const Footer = () => {
       <div className="footer-columns">
         <div>
           <h4>Our mission</h4>
-          <a href="#">About us</a>
-          <a href="#">Subscription</a>
+          <a href="/about">About us</a>
+          <a href="/subscription">Subscription</a>
         </div>
         <div>
           <h4>Help center</h4>

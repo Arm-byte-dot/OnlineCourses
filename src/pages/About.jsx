@@ -9,7 +9,7 @@ const differentiators = [
 
 const About = () => {
   return (
-    <div className="page about-page">
+    <div className="page page-with-footer about-page">
       <Header />
       <main className="about-wrapper">
         <section className="about-section">

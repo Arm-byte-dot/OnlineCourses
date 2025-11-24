@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 // Pricing tiers cards.
 const Pricing = ({ plans }) => {
   return (
@@ -19,7 +21,28 @@ const Pricing = ({ plans }) => {
                 </li>
               ))}
             </ul>
-            <button className="secondary">{plan.cta}</button>
+            {(() => {
+              const planKey = plan.title.toLowerCase().includes('plus')
+                ? 'plus'
+                : plan.title.toLowerCase().includes('pro')
+                ? 'pro'
+                : null
+
+              if (!planKey) {
+                return (
+                  <button className="secondary" type="button">
+                    {plan.cta}
+                  </button>
+                )
+              }
+
+              const href = `/subscription?plan=${planKey}`
+              return (
+                <Link to={href}>
+                  <button className="secondary">{plan.cta}</button>
+                </Link>
+              )
+            })()}
           </div>
         ))}
       </div>

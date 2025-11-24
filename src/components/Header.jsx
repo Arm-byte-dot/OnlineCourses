@@ -2,7 +2,7 @@
 import { AppIcon } from './Icons'
 
 const Header = () => {
-  const normalizedPath = window.location.pathname.replace(/\/+$/, '') || '/'
+  const normalizedPath = typeof window !== 'undefined' ? window.location.pathname.replace(/\/+$/, '') || '/' : '/'
   const isAboutPage = normalizedPath.toLowerCase().startsWith('/about')
   const isInstructorsPage = normalizedPath.toLowerCase().startsWith('/instructors')
 

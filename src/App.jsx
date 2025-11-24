@@ -4,7 +4,7 @@ import Signup from './pages/Signup'
 import Home from './pages/Home'
 import About from './pages/About'
 import Instructors from './pages/Instructors'
-
+import Subscription from './pages/Subscription'
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +13,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<Signup />} /> 
         <Route path="/instructors" element={<Instructors />} />
+        <Route path='/subscription' element={<Subscription/>} />
         <Route path="*" element={<h1>Eror 404 page not found</h1>} />
       </Routes>
     </BrowserRouter>

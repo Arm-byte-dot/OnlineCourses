@@ -24,7 +24,7 @@ const instructors = [
 
 const Instructors = () => {
   return (
-    <div className="page instructors-page">
+    <div className="page page-with-footer instructors-page">
       <Header />
       <main className="instructors-wrapper">
         <h1 className="about-heading">Meet Our Expert Instructors</h1>
