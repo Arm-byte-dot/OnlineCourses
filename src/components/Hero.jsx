@@ -21,7 +21,7 @@ const Hero = () => {
           <br />
           Start your journey to success today.
         </p>
-        <a href='/signup'>
+        <a href='/home'>
           <button className="primary">Join now</button>
         </a>
       </div>
