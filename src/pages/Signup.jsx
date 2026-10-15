@@ -1,21 +1,21 @@
 import { AppIcon } from '../components/Icons'
-import Footer from '../components/Footer'
+
 const Signup = () => {
   return (
-    <div className="page page-with-footer signup-page">
-      <div className="signup-top">
+    <div className="page signup-page">
+      <header className="signup-top">
         <div className="brand">
           <span className="icon">
             <AppIcon name="book" size={22} />
           </span>
           <span className="brand-name">DevNest</span>
         </div>
-        <nav className="signup-nav">
-          <a href="/" className="signup-nav-link signup-nav-home" aria-label="Go to Home">
+        <nav className="signup-nav" aria-label="Signup navigation">
+          <a href="/home" className="signup-nav-link signup-nav-home" aria-label="Go to Home">
             <AppIcon name="home" size={20} />
           </a>
         </nav>
-      </div>
+      </header>
 
       <main className="signup-main">
         <h1 className="signup-title">Sign up</h1>
@@ -35,8 +35,6 @@ const Signup = () => {
           </button>
         </div>
       </main>
-
-      <Footer/>
     </div>
   )
 }
