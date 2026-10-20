@@ -24,6 +24,8 @@ const Signup = () => {
           <input type="text" placeholder="Surname..." />
           <input type="email" placeholder="Email..." />
           <input type="password" placeholder="Password..." />
+          <input type="password" placeholder="Confirm password..." />
+
           <button type="button" className="about-button">
             Join now
           </button>

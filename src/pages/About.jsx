@@ -54,7 +54,7 @@ const About = () => {
         <section className="about-cta">
           <h2 className="about-heading">Join our journey</h2>
           <p>Start learning today and become part of a growing community of motivated learners building a better future through education.</p>
-          <a href='/signup'>
+          <a href='/Home'>
             <button className="about-button" type="button">
               Join now
             </button>
