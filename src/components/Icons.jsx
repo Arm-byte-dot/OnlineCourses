@@ -11,6 +11,8 @@ const iconNames = {
   sparkles: 'solar:sparkles-bold-duotone',
   home: 'solar:home-2-bold-duotone',
   edit: 'solar:pen-new-round-bold-duotone',
+  google: 'logos:google-icon',
+  github: 'simple-icons:github',
 }
 
 // Shared icon component so components only pass semantic names.

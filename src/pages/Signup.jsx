@@ -1,21 +1,11 @@
-import { AppIcon } from '../components/Icons'
+import { Link } from 'react-router-dom'
+import AuthHeader from '../components/AuthHeader'
+import SocialAuthButtons from '../components/SocialAuthButtons'
 
 const Signup = () => {
   return (
     <div className="page signup-page">
-      <header className="signup-top">
-        <div className="brand">
-          <span className="icon">
-            <AppIcon name="book" size={22} />
-          </span>
-          <span className="brand-name">DevNest</span>
-        </div>
-        <nav className="signup-nav" aria-label="Signup navigation">
-          <a href="/home" className="signup-nav-link signup-nav-home" aria-label="Go to Home">
-            <AppIcon name="home" size={20} />
-          </a>
-        </nav>
-      </header>
+      <AuthHeader />
 
       <main className="signup-main">
         <h1 className="signup-title">Sign up</h1>
@@ -31,11 +21,10 @@ const Signup = () => {
           </button>
         </div>
         <div className="signup-footer-links">
-          <a href="#">Already got an Account</a>
-          <button type="button" className="signup-login">
-            log in
-          </button>
+          <span>Already have an account?</span>
+          <Link to="/login" className="signup-login">Log in</Link>
         </div>
+        <SocialAuthButtons mode="signup" />
       </main>
     </div>
   )
