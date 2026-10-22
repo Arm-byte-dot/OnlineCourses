@@ -1,4 +1,3 @@
-import Header from '../components/Header'
 import Footer from '../components/Footer'
 const differentiators = [
   'Real-world focused courses',
@@ -9,8 +8,7 @@ const differentiators = [
 
 const About = () => {
   return (
-    <div className="page page-with-footer about-page">
-      <Header />
+    <>
       <main className="about-wrapper">
         <section className="about-section">
           <h1 className="about-heading">About us</h1>
@@ -63,7 +61,7 @@ const About = () => {
       </main>
 
      <Footer/>
-    </div>
+    </>
   )
 }
 

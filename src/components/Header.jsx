@@ -1,10 +1,10 @@
 // Top navigation bar with brand and quick actions.
+import { NavLink, useLocation } from 'react-router-dom'
 import { AppIcon } from './Icons'
 
 const Header = () => {
-  const normalizedPath = typeof window !== 'undefined' ? window.location.pathname.replace(/\/+$/, '') || '/' : '/'
-  const isAboutPage = normalizedPath.toLowerCase().startsWith('/about')
-  const isInstructorsPage = normalizedPath.toLowerCase().startsWith('/instructors')
+  const { pathname } = useLocation()
+  const isAboutPage = pathname.toLowerCase().startsWith('/about')
 
   return (
     <div className="topbar">
@@ -14,16 +14,14 @@ const Header = () => {
         </span>
         <span className="brand-name">DevNest</span>
       </div>
-      <nav className="nav">
-        <a className={!isAboutPage && !isInstructorsPage ? 'active' : ''} href="/">
+      <nav className={`nav${isAboutPage ? ' nav--about' : ''}`} aria-label="Main navigation">
+        <span className="nav-slider" aria-hidden="true" />
+        <NavLink to="/" end>
           Home
-        </a>
-        <a className={isAboutPage ? 'active' : ''} href="/about">
+        </NavLink>
+        <NavLink to="/about">
           About
-        </a>
-        <a className={isInstructorsPage ? 'active' : ''} href="/instructors">
-          Instructors
-        </a>
+        </NavLink>
       </nav>
       <div className="top-actions">
         <span className="icon">

@@ -16,7 +16,6 @@ const Footer = () => {
         <div>
           <h4>Our mission</h4>
           <a href="/about">About us</a>
-          <a href="/subscription">Subscription</a>
         </div>
         <div>
           <h4>Help center</h4>
